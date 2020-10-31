@@ -28,7 +28,7 @@ declare abstract class StorageBase {
     abstract read(options?: StorageBase.ReadOptions): Promise<Buffer>;
 
     getTargetDir(baseDir?: string): string;
-    getUniqueFileName(image: StorageBase.Image, targetDir: string): string;
+    getUniqueFileName(image: StorageBase.Image, targetDir: string): Promise<string>;
     getSanitizedFileName(fileName: string): string;
 }
 
